@@ -3,6 +3,7 @@ let sliderId = ["slider-imagenes", "slider-noticia"]
 mostrarSlide(1, 0);
 mostrarSlide(1, 1);
 
+
 function mostrarSlide(n, no) {
 	let x = document.getElementsByClassName(sliderId[no]);
 	if (n > x.length) { sliderIndex[no] = 1 }
@@ -16,3 +17,7 @@ function mostrarSlide(n, no) {
 function cambiarSlide(n, no) {
 	mostrarSlide(sliderIndex[no] += n, no);
 }
+
+setInterval(cambiarSlide, 2000, 1, 0);
+setInterval(cambiarSlide, 2000, 1, 1);
+
